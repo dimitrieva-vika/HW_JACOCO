@@ -49,4 +49,4 @@ public class StatisticsServiceTest {
         long actual = service.findMax(incomes);
         Assertions.assertEquals(expected, actual);
     }
-}
+// force update}
