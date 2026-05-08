@@ -49,4 +49,13 @@ public class StatisticsServiceTest {
         long actual = service.findMax(incomes);
         Assertions.assertEquals(expected, actual);
     }
-// force update}
+
+    @Test
+    void findMaxWhenMaxInMiddle() {
+        StatisticsService service = new StatisticsService();
+        long[] incomes = {10, 20, 50, 30, 40};
+        long expected = 50;
+        long actual = service.findMax(incomes);
+        Assertions.assertEquals(expected, actual);
+    }
+}
