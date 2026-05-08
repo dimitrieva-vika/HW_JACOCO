@@ -68,5 +68,12 @@ public class StatisticsServiceTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    // final version
+    @Test
+    void findMaxWhenFirstElementUpdatesLater() {
+        StatisticsService service = new StatisticsService();
+        long[] incomes = {5, 10, 10, 10};
+        long expected = 10;
+        long actual = service.findMax(incomes);
+        Assertions.assertEquals(expected, actual);
+    }
 }
